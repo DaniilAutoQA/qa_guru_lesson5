@@ -8,7 +8,6 @@ import model.StudentModel;
 import org.junit.jupiter.api.Test;
 import page.FillRegistrationForm;
 
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static components.CalendarElement.calendarComponent;
@@ -30,7 +29,6 @@ public class RegistrationFormPageObjectTests extends TestBase {
             "English",
             faker.address().fullAddress(),
             "load.txt");
-
 
     @Test
     void fillFormTest(){
@@ -62,4 +60,5 @@ public class RegistrationFormPageObjectTests extends TestBase {
         expectedStudentData.getStateAndCity().shouldHave(text(student.getState() + " " + student.getCity()));
 
     }
+
 }
